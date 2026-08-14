@@ -15,13 +15,13 @@ const steps = [
 
 export function ResearchProgress(){
   return (
-    <div className="glass p-4 rounded mt-4">
-      <h4 className="font-semibold">Running research</h4>
+    <div className="glass mt-4 rounded-2xl p-4">
+      <div className="text-[10px] uppercase tracking-[0.32em] text-[#C7A15A]">Running Research</div>
       <div className="mt-3 space-y-2">
         {steps.map((s,idx)=> (
           <motion.div key={s} initial={{opacity:0, x:-10}} animate={{opacity:1, x:0}} transition={{delay: idx*0.08}} className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-lexnova-500 rounded-full" />
-            <div className="text-sm text-gray-300">{s}</div>
+            <div className="h-2.5 w-2.5 rounded-full bg-[#C7A15A]" />
+            <div className="text-sm text-[#D9C8A7]">{s}</div>
           </motion.div>
         ))}
       </div>

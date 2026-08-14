@@ -26,7 +26,7 @@ export default function Research(){
                   setShowResults(true)
                 }, 2200)
               }}
-              className="rounded-lg bg-blue-600 px-5 py-3 font-medium text-white"
+              className="rounded-md border border-[#B08A4A] bg-[#B08A4A] px-5 py-3 font-medium text-[#1a120d]"
             >
               Start AI Research
             </button>
@@ -38,32 +38,37 @@ export default function Research(){
         {showResults && (
           <section className="mt-6 space-y-6">
             <div>
-              <h3 className="text-2xl font-semibold text-white">Research Results</h3>
-              <p className="mt-1 text-slate-400">AI-generated research based on the indexed demonstration corpus.</p>
+              <div className="text-[10px] uppercase tracking-[0.32em] text-[#C7A15A]">Research Query</div>
+              <h3 className="serif mt-2 text-4xl text-[#F2E8D5]">Termination of commercial contracts and damages</h3>
             </div>
 
             <div>
-              <div className="mb-3 text-xs uppercase tracking-[0.3em] text-slate-400">Legal Issues</div>
+              <div className="mb-3 text-[10px] uppercase tracking-[0.32em] text-[#B9AA94]">Legal Issues Identified</div>
               <div className="grid gap-3 md:grid-cols-2">
-                {demoCase.issues.map((issue) => <IssueCard key={issue} issue={issue} />)}
-              </div>
-            </div>
-
-            <div>
-              <div className="mb-3 text-xs uppercase tracking-[0.3em] text-slate-400">Applicable Statutory Provisions</div>
-              <div className="grid gap-3 md:grid-cols-3">
-                {demoStatutes.map((s) => (
-                  <div key={s.id} className="glass rounded-2xl p-4">
-                    <div className="text-lg font-semibold text-white">{s.title}</div>
-                    <div className="mt-2 text-xs uppercase tracking-[0.22em] text-sky-300">{s.section}</div>
-                    <div className="mt-2 text-sm text-slate-300">{s.description}</div>
+                {demoCase.issues.map((issue, idx) => (
+                  <div key={issue} className="glass rounded-2xl p-4">
+                    <div className="text-[10px] uppercase tracking-[0.26em] text-[#C7A15A]">0{idx + 1}</div>
+                    <div className="mt-2 text-lg text-[#F2E8D5]">{issue}</div>
                   </div>
                 ))}
               </div>
             </div>
 
             <div>
-              <div className="mb-3 text-xs uppercase tracking-[0.3em] text-slate-400">Relevant Authorities</div>
+              <div className="mb-3 text-[10px] uppercase tracking-[0.32em] text-[#B9AA94]">Applicable Statutory Provisions</div>
+              <div className="grid gap-3 md:grid-cols-3">
+                {demoStatutes.map((s) => (
+                  <div key={s.id} className="glass rounded-2xl p-4">
+                    <div className="text-lg font-semibold text-[#F2E8D5]">{s.title}</div>
+                    <div className="mt-2 text-[10px] uppercase tracking-[0.22em] text-[#C7A15A]">{s.section}</div>
+                    <div className="mt-2 text-sm text-[#D9C8A7]">{s.description}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="mb-3 text-[10px] uppercase tracking-[0.32em] text-[#B9AA94]">Top Authorities</div>
               <div className="grid gap-3 md:grid-cols-2">
                 {demoCase.authorities.map((a) => <AuthorityCard key={a.id} a={a} />)}
               </div>

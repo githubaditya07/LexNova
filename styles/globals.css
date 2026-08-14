@@ -1,38 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --bg:#07131f;
-  --bg-soft:#0d1b2a;
-  --card:#101b2a;
-  --muted:#9aa4b2;
-  --accent:#63a4ff;
-  --accent-strong:#376cf4;
-  --line: rgba(148,163,184,0.15);
+:root {
+  --bg:#17130F;
+  --bg-soft:#211A14;
+  --surface:#282019;
+  --surface-strong:#31271F;
+  --surface-elevated:#382D23;
+  --paper:#F1E6D0;
+  --text:#F2E8D5;
+  --text-soft:#B9AA94;
+  --text-muted:#817463;
+  --accent:#B08A4A;
+  --accent-bright:#C7A15A;
+  --line:#4A3B2C;
+  --shadow: rgba(9, 7, 5, 0.55);
 }
 
-html,body,#root{
-  min-height:100%;
+html, body, #root {
+  min-height: 100%;
 }
 
 body {
   background:
-    radial-gradient(circle at top, rgba(59,130,246,0.12), transparent 25%),
-    var(--bg);
-  color: #e6eef8;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    radial-gradient(circle at top, rgba(176,138,74,0.08), transparent 22%),
+    linear-gradient(180deg, #17130F 0%, #1C1712 100%);
+  color: var(--text);
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
 
+.serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.02em;
+}
+
 .glass {
-  background: rgba(15, 23, 36, 0.78);
+  background: rgba(40, 32, 25, 0.92);
   border: 1px solid var(--line);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  backdrop-filter: blur(8px);
+}
+
+.paper-surface {
+  background: #F1E6D0;
+  color: #1b1713;
+  border: 1px solid #d1b98d;
 }
 
 .grid-overlay {
   background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-size: 26px 26px;
+}
+
+.brass-rule {
+  border-color: rgba(192, 161, 90, 0.35);
+}
+
+.legal-chip {
+  border: 1px solid rgba(192, 161, 90, 0.35);
+  background: rgba(192, 161, 90, 0.08);
+  color: #e8d5a1;
+}
+
+.legal-panel {
+  background: rgba(49, 39, 31, 0.9);
+  border: 1px solid var(--line);
 }

@@ -3,22 +3,20 @@ import React from 'react'
 
 export function Navbar(){
   return (
-    <header className="w-full py-4 px-6 border-b border-white/6 glass">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="text-lg font-semibold">LEXNOVA</Link>
-          <nav className="hidden md:flex gap-3 text-sm text-gray-300">
-            <Link href="/workspace">Research Workspace</Link>
-            <Link href="/research">Research</Link>
-            <Link href="/brief">Brief</Link>
+    <header className="w-full border-b border-[#4A3B2C] bg-[#1b1713]/90 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
+        <div className="flex items-center gap-6">
+          <Link href="/" className="serif text-3xl font-semibold tracking-[0.12em] text-[#F2E8D5]">LEXNOVA</Link>
+          <nav className="hidden items-center gap-6 text-sm text-[#D7C5A6] md:flex">
+            <Link href="/workspace" className="border-l border-[#4A3B2C] pl-4 transition hover:text-[#F2E8D5]">Research Workspace</Link>
+            <Link href="/research" className="transition hover:text-[#F2E8D5]">Research</Link>
+            <Link href="/brief" className="transition hover:text-[#F2E8D5]">Brief</Link>
           </nav>
         </div>
 
-        <div className="flex items-center gap-3">
-          <nav className="hidden sm:flex gap-3 text-sm">
-            <Link href="/login" className="text-gray-300">Sign in</Link>
-          </nav>
-          <span className="text-sm text-gray-400">Demo Mode</span>
+        <div className="flex items-center gap-4 text-sm">
+          <Link href="/login" className="border border-[#4A3B2C] bg-[#2B221B] px-3 py-2 text-[#F2E8D5] transition hover:border-[#B08A4A]">Sign in</Link>
+          <span className="border-l border-[#4A3B2C] pl-4 text-[#B9AA94]">Demo Mode</span>
         </div>
       </div>
     </header>

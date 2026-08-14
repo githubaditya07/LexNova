@@ -6,18 +6,26 @@ import { CitationDrawer } from './CitationDrawer'
 export function AuthorityCard({a}:{a:DemoAuthority}){
   const [open, setOpen] = useState(false)
   return (
-    <div className="glass p-4 rounded">
-      <div className="flex items-start justify-between">
+    <div className="glass rounded-2xl p-4">
+      <div className="flex items-start justify-between gap-3 border-b border-[#4A3B2C] pb-3">
         <div>
-          <div className="font-semibold">{a.title}</div>
-          <div className="text-sm text-gray-400">{a.court} — {a.year}</div>
+          <div className="serif text-2xl text-[#F2E8D5]">{a.title}</div>
+          <div className="mt-2 text-[10px] uppercase tracking-[0.28em] text-[#C7A15A]">{a.court} • {a.year}</div>
         </div>
         <div className="text-right">
-          <div className="text-sm text-gray-300">Score: {a.score}</div>
-          <button onClick={()=>setOpen(true)} className="mt-2 px-3 py-1 border rounded text-sm">View Evidence</button>
+          <div className="text-[10px] uppercase tracking-[0.22em] text-[#B9AA94]">Prototype relevance score</div>
+          <div className="mt-2 text-lg text-[#F2E8D5]">{a.score}</div>
         </div>
       </div>
-      <p className="text-sm text-gray-300 mt-3">{a.excerpt}</p>
+
+      <div className="mt-3 flex flex-wrap gap-2">
+        <span className="legal-chip rounded-full px-2 py-1 text-[9px] uppercase tracking-[0.2em]">{a.sourceType}</span>
+        <span className="legal-chip rounded-full px-2 py-1 text-[9px] uppercase tracking-[0.2em]">{a.jurisdiction}</span>
+      </div>
+
+      <p className="mt-3 text-sm leading-6 text-[#D9C8A7]">{a.excerpt}</p>
+
+      <button onClick={()=>setOpen(true)} className="mt-4 rounded-md border border-[#B08A4A] bg-[#2B221B] px-3 py-2 text-sm text-[#F2E8D5]">View Evidence</button>
 
       {open && <CitationDrawer a={a} onClose={()=>setOpen(false)} />}
     </div>

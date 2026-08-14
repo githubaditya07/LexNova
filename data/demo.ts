@@ -3,47 +3,47 @@ import type { DemoCase, DemoAuthority } from '../types'
 const authorities: DemoAuthority[] = [
   {
     id: 'A',
-    title: 'Authority A (DEMO / SYNTHETIC SOURCE)',
-    court: 'Karnataka High Court',
-    year: '2018',
+    title: 'M/s Deep Industries Ltd. v. Oil and Natural Gas Corporation Ltd.',
+    court: 'Supreme Court of India',
+    year: '2019',
     score: '92%',
-    excerpt: 'Holds that premature termination may amount to breach when notice periods are contractual.',
+    excerpt: 'Commercial contract termination and arbitration metadata from the demo corpus; source metadata available — full-text evidence not indexed in this prototype.',
     sourceType: 'Judgment',
-    jurisdiction: 'Karnataka',
-    evidence: 'Document: Demo Judgment A — Page 12\nRetrieved passage: "Termination without notice where contract specified notice constitutes breach..."\nResearch conclusion: likely relevant to the termination issue.'
+    jurisdiction: 'India',
+    evidence: 'Citation: 2019 INSC 1299\nCourt: Supreme Court of India\nDate: 28 November 2019\nSource metadata available — full-text evidence not indexed in this prototype.'
   },
   {
     id: 'B',
-    title: 'Authority B (DEMO / SYNTHETIC SOURCE)',
-    court: 'Delhi High Court',
-    year: '2015',
-    score: '86%',
-    excerpt: 'Discusses remedies and calculation of contractual damages in supply agreements.',
+    title: 'ONGC Ltd. v. Saw Pipes Ltd.',
+    court: 'Supreme Court of India',
+    year: '2003',
+    score: '88%',
+    excerpt: 'Commercial contract, liquidated damages and arbitration metadata from the demo corpus; source metadata available — full-text evidence not indexed in this prototype.',
     sourceType: 'Judgment',
-    jurisdiction: 'Delhi',
-    evidence: 'Document: Demo Judgment B — Page 5\nRetrieved passage: "Damages should aim to put the claimant in the position..."\nResearch conclusion: useful for damages assessment.'
+    jurisdiction: 'India',
+    evidence: 'Citation: (2003) 5 SCC 705\nCourt: Supreme Court of India\nDate: 2003\nSource metadata available — full-text evidence not indexed in this prototype.'
   },
   {
     id: 'C',
-    title: 'Authority C (DEMO / SYNTHETIC SOURCE)',
-    court: 'Bombay High Court',
-    year: '2012',
-    score: '78%',
-    excerpt: 'Analyses applicability of dispute resolution clauses in commercial contracts.',
+    title: 'Kailash Nath Associates v. Delhi Development Authority',
+    court: 'Supreme Court of India',
+    year: '2015',
+    score: '85%',
+    excerpt: 'Contract breach, forfeiture and liquidated damages metadata from the demo corpus; source metadata available — full-text evidence not indexed in this prototype.',
     sourceType: 'Judgment',
-    jurisdiction: 'Maharashtra',
-    evidence: 'Document: Demo Judgment C — Page 3\nRetrieved passage: "Arbitration clause interpretation depends on clear reference..."\nResearch conclusion: relevant to forum and clause enforcement.'
+    jurisdiction: 'India',
+    evidence: 'Citation: (2015) 4 SCC 136\nCourt: Supreme Court of India\nDate: 9 January 2015\nSource metadata available — full-text evidence not indexed in this prototype.'
   },
   {
     id: 'D',
-    title: 'Authority D (DEMO / SYNTHETIC SOURCE)',
-    court: 'Supreme Court (Demo corpus)',
-    year: '2020',
-    score: '74%',
-    excerpt: 'On balancing commercial certainty with contractual interpretation principles.',
+    title: 'M/s J.G. Engineers Pvt. Ltd. v. Union of India',
+    court: 'Supreme Court of India',
+    year: '2011',
+    score: '79%',
+    excerpt: 'Works contract, termination and arbitration metadata from the demo corpus; source metadata available — full-text evidence not indexed in this prototype.',
     sourceType: 'Judgment',
     jurisdiction: 'India',
-    evidence: 'Document: Demo Judgment D — Page 18\nRetrieved passage: "Commercial contracts must be read in light of the parties’ bargain and objective intent."\nResearch conclusion: supports interpretive frame.'
+    evidence: 'Court: Supreme Court of India\nDate: 28 April 2011\nSource metadata available — full-text evidence not indexed in this prototype.'
   }
 ]
 
@@ -70,47 +70,47 @@ export const demoStatutes = [
 
 export const demoCase: DemoCase = {
   id: 'demo-1',
-  title: 'ABC Technologies Pvt. Ltd. vs XYZ Manufacturing Ltd.',
-  jurisdiction: 'Karnataka Commercial Court',
+  title: 'M/s Deep Industries Ltd. v. Oil and Natural Gas Corporation Ltd.',
+  jurisdiction: 'Supreme Court of India',
   caseType: 'Commercial Contract Dispute',
-  summary: 'The plaintiff alleges that the defendant prematurely terminated a commercial supply agreement and seeks damages for the alleged breach.',
+  summary: 'The dispute concerns contract termination, alleged breach of commercial obligations and the interplay between contractual damages and arbitration proceedings.',
   issues: [
-    'Whether the termination constituted breach of contract',
-    'Whether contractual damages may be claimed',
-    'Whether the relevant dispute resolution clause applies',
-    'What legal principles govern the dispute'
+    'Contract termination',
+    'Breach of contractual obligations',
+    'Damages / compensation',
+    'Arbitration and dispute resolution'
   ],
   authorities
 }
 
 export const demoBrief = {
-  caseOverview: 'Prototype brief: summary of issues and suggested authorities based on demo corpus.',
+  caseOverview: 'This prototype brief summarizes the main legal issues and the relevant indexed legal authorities for a commercial contract termination dispute.',
   authorities
 }
 
 export const demoResearchResponses: Record<string, {text:string; sources:string[]}> = {
   'which authority is most relevant to the termination issue?': {
-    text: 'Based on the indexed demonstration corpus, Authority A is the strongest match because its factual pattern and contractual termination issue most closely resemble the current case.',
-    sources: ['Authority A', 'Authority B']
+    text: 'Based on the indexed demo corpus, M/s Deep Industries Ltd. v. Oil and Natural Gas Corporation Ltd. is the strongest match because it directly concerns commercial contract termination and dispute resolution.',
+    sources: ['M/s Deep Industries Ltd. v. ONGC Ltd.', 'ONGC Ltd. v. Saw Pipes Ltd.']
   },
   'show only supreme court authorities.': {
-    text: 'Within the demonstration corpus, the Supreme Court-type authority is ranked as a secondary but useful interpretive authority, while the Karnataka and Delhi judgments are more factually relevant.',
-    sources: ['Authority D', 'Authority A']
+    text: 'The Supreme Court authorities in the demo corpus are the most relevant starting points for the issue, especially Deep Industries and ONGC v. Saw Pipes.',
+    sources: ['M/s Deep Industries Ltd. v. ONGC Ltd.', 'ONGC Ltd. v. Saw Pipes Ltd.']
   },
   'summarize the strongest authority.': {
-    text: 'Authority A is the strongest authority because it most closely aligns with a premature termination and notice issue in a commercial contract setting.',
-    sources: ['Authority A']
+    text: 'The strongest authority in the indexed demo corpus is Deep Industries because it is a commercially sensitive termination and arbitration dispute and is closely aligned with the present research question.',
+    sources: ['M/s Deep Industries Ltd. v. ONGC Ltd.']
   },
   'what statutory provisions should i examine?': {
-    text: 'The most relevant demonstration provisions are the Indian Contract Act, 1872 provisions on damages and the Arbitration and Conciliation Act, 1996 provisions governing contract enforcement and arbitral process.',
+    text: 'The most relevant provisions in the demo corpus are the Indian Contract Act, 1872 provisions on damages and the Arbitration and Conciliation Act, 1996 provisions on arbitration enforcement and jurisdictional issues.',
     sources: ['Indian Contract Act, 1872', 'Arbitration and Conciliation Act, 1996']
   },
   'explain this in simpler language.': {
-    text: 'The dispute is about whether the supplier was entitled to end the agreement early and whether the other side can claim monetary compensation for that alleged breach.',
-    sources: ['Authority A', 'Indian Contract Act, 1872']
+    text: 'This dispute is about whether a commercial agreement was validly terminated and whether the other side may claim compensation, while also considering the arbitration clause.',
+    sources: ['M/s Deep Industries Ltd. v. ONGC Ltd.', 'Indian Contract Act, 1872']
   },
   'default': {
-    text: 'This is a deterministic demo response. Try asking about the most relevant authority or statutory provisions.',
+    text: 'This is a deterministic demo response. Ask about a specific authority, a statutory provision, or the commercial termination issue.',
     sources: []
   }
 }
