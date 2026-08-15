@@ -1,15 +1,22 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { DemoCase } from '../types'
 
 export function CaseCard({c}:{c:DemoCase}){
   return (
-    <div className="glass rounded-2xl p-6 md:p-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -3 }}
+      transition={{ duration: 0.2 }}
+      className="glass rounded-2xl p-6 md:p-8"
+    >
       <div className="flex flex-col gap-4 border-b border-[#4A3B2C] pb-5 md:flex-row md:items-end md:justify-between">
-        <div>
+        <div className="min-w-0 flex-1">
           <div className="text-[10px] uppercase tracking-[0.32em] text-[#C7A15A]">DEMO CASE</div>
-          <h3 className="serif mt-3 text-4xl text-[#F2E8D5]">{c.title}</h3>
+          <h3 className="serif mt-3 text-3xl leading-tight text-[#F2E8D5] break-words sm:text-4xl">{c.title}</h3>
         </div>
-        <div className="legal-chip rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em]">Commercial Contract Dispute</div>
+        <div className="legal-chip shrink-0 rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.2em]">Commercial Contract Dispute</div>
       </div>
 
       <div className="mt-5 grid gap-3 md:grid-cols-3">
@@ -37,6 +44,6 @@ export function CaseCard({c}:{c:DemoCase}){
           {c.issues.map((i,idx)=>(<li key={idx} className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#C7A15A]" /> <span>{i}</span></li>))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   )
 }
