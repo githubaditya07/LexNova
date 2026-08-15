@@ -12,8 +12,8 @@ export default function Workspace(){
           <p className="mt-2 text-sm text-[#B9AA94]">Structured intelligence for commercial dispute research.</p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Link href="/research" className="rounded-md border border-[#B08A4A] bg-[#B08A4A] px-5 py-3 font-medium text-[#1a120d]">Open Demo Case</Link>
-          <button className="rounded-md border border-[#4A3B2C] bg-[#2B221B] px-5 py-3 font-medium text-[#F2E8D5]">Start New Research</button>
+          <Link href="/research" className="rounded-md border border-[#B08A4A] bg-[#B08A4A] px-5 py-3 font-medium text-[#1a120d] shadow-[0_8px_24px_rgba(176,138,74,0.28)] transition hover:-translate-y-0.5 hover:bg-[#C7A15A]">Open Demo Case</Link>
+          <button className="rounded-md border border-[#4A3B2C] bg-[#2B221B] px-5 py-3 font-medium text-[#F2E8D5] transition hover:-translate-y-0.5 hover:border-[#B08A4A]">Start New Research</button>
         </div>
       </div>
 
@@ -25,7 +25,7 @@ export default function Workspace(){
       </div>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
-        <div className="glass rounded-2xl p-6">
+        <div className="workspace-card glass rounded-2xl p-6 transition duration-200 hover:-translate-y-1">
           <div className="mb-4 text-[10px] uppercase tracking-[0.32em] text-[#B9AA94]">Recent Activity</div>
           <div className="space-y-4">
             {[
@@ -33,7 +33,7 @@ export default function Workspace(){
               ['Research brief draft', 'Prepared 2 hours ago • 4 authorities'],
               ['Termination analysis', 'Updated 1 day ago • research notes']
             ].map(([title, subtitle]) => (
-              <div key={title} className="rounded-xl border border-[#4A3B2C] bg-[#211A14] p-4">
+              <div key={title} className="rounded-xl border border-[#4A3B2C] bg-[#211A14] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] transition hover:border-[#B08A4A] hover:bg-[#261f1a]">
                 <div className="font-medium text-[#F2E8D5]">{title}</div>
                 <div className="mt-1 text-sm text-[#B9AA94]">{subtitle}</div>
               </div>
@@ -41,7 +41,7 @@ export default function Workspace(){
           </div>
         </div>
 
-        <div className="glass rounded-2xl p-6">
+        <div className="workspace-card glass rounded-2xl p-6 transition duration-200 hover:-translate-y-1">
           <div className="text-[10px] uppercase tracking-[0.32em] text-[#B9AA94]">Workspace</div>
           <ul className="mt-4 space-y-3 text-[#F2E8D5]">
             <li className="border-b border-[#4A3B2C] pb-2">Research Workspace</li>
